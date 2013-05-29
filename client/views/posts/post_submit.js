@@ -13,5 +13,6 @@ Template.postSubmit.events({
 				return alert(error.reason);
 			Meteor.Router.to('postPage', id);
 		});
+		Meteor.Router.to('postsList');
 	}
 });
