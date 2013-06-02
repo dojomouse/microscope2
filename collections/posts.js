@@ -34,10 +34,9 @@ Meteor.methods({
       Meteor.setTimeout(function() {
         future.ret();
       }, 5 * 1000);
+      future.wait();
     }
-
     var postId = Posts.insert(post);
-
     return postId;
   }
 });
