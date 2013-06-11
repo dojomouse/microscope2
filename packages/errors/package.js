@@ -9,8 +9,8 @@ Package.on_use(function (api, where) {
 });
 
 Package.on_test(function(api) {
-	api.use('errors', 'client');
-	api.use(['tinytest', 'test-helpers'], 'client');
+  api.use('errors', 'client');
+  api.use(['tinytest', 'test-helpers'], 'client');  
 
-	api.add_files('errors_tests.js', 'client');
+  api.add_files('errors_tests.js', 'client');
 });
