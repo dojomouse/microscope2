@@ -44,13 +44,14 @@ Meteor.methods({
     
     return postId;
   },
+
   upvote: function(postId) {
     var user = Meteor.user();
     // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to upvote");
     Posts.update({
-      _id: post._id,
+      _id: postId,
       upvoters: {$ne: user._id}
     }, {
       $addToSet: {upvoters: user._id},
